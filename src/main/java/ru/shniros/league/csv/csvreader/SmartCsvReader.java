@@ -1,10 +1,8 @@
-package ru.shniros.league.csvreader;
+package ru.shniros.league.csv.csvreader;
 
 import com.opencsv.bean.CsvToBean;
 import com.opencsv.bean.CsvToBeanBuilder;
-import ru.shniros.league.LeagueApplication;
-import ru.shniros.league.csvreader.dto.CsvProductData;
-import ru.shniros.league.domain.Product;
+import ru.shniros.league.csv.dto.CsvProductData;
 
 import java.io.*;
 import java.util.List;
