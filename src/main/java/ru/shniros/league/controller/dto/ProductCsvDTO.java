@@ -1,4 +1,4 @@
-package ru.shniros.league.csvreader.dto;
+package ru.shniros.league.controller.dto;
 
 import com.opencsv.bean.CsvBindByPosition;
 import lombok.AllArgsConstructor;
@@ -10,7 +10,7 @@ import lombok.experimental.Accessors;
 @Accessors(chain = true)
 @AllArgsConstructor
 @NoArgsConstructor
-public class CsvProductData {
+public class ProductCsvDTO {
     @CsvBindByPosition(position = 0)
     private Integer productId;
     @CsvBindByPosition(position = 1)

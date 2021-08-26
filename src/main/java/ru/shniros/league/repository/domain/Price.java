@@ -1,23 +1,24 @@
-package ru.shniros.league.domain;
+package ru.shniros.league.repository.domain;
 
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.Accessors;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Data
 @Entity
 @Accessors(chain = true)
 @RequiredArgsConstructor
-public class ProductPrice {
+public class Price {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    @Column(name = "price")
+    @Column
     private double price;
-    @Column(name = "date")
-    private String date; //не знаю в каком у вас формате дата поэтому решил использовать string
+    @Column
+    private Date date;
     @ManyToOne
     @JoinColumn
     private Product product;

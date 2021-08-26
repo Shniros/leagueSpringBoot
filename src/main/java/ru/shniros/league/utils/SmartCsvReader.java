@@ -1,10 +1,8 @@
-package ru.shniros.league.csvreader;
+package ru.shniros.league.utils;
 
 import com.opencsv.bean.CsvToBean;
 import com.opencsv.bean.CsvToBeanBuilder;
-import ru.shniros.league.LeagueApplication;
-import ru.shniros.league.csvreader.dto.CsvProductData;
-import ru.shniros.league.domain.Product;
+import ru.shniros.league.controller.dto.ProductCsvDTO;
 
 import java.io.*;
 import java.util.List;
@@ -16,15 +14,15 @@ public class SmartCsvReader {
     private static final Logger logger = Logger.getLogger(SmartCsvReader.class.getName());
 
 
-    public List<CsvProductData> readCsvFile() throws IOException {
+    public List<ProductCsvDTO> readCsvFile() throws IOException {
         Properties pathFile = new Properties();
         FileReader readerPath = new FileReader("src/main/resources/path.properties");;
         pathFile.load(readerPath);
         readerPath.close();
         logger.log(Level.INFO,"Start reading: " + pathFile.get("path").toString());
         FileReader reader = new FileReader(pathFile.get("path").toString());
-        CsvToBean<CsvProductData>   csvtobean = new CsvToBeanBuilder<CsvProductData>(reader)
-                                                    .withType(CsvProductData.class)
+        CsvToBean<ProductCsvDTO>   csvtobean = new CsvToBeanBuilder<ProductCsvDTO>(reader)
+                                                    .withType(ProductCsvDTO.class)
                                                     .withSeparator(';')
                                                     .build();
 

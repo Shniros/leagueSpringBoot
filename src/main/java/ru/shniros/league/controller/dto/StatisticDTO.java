@@ -1,11 +1,11 @@
-package ru.shniros.league.response;
+package ru.shniros.league.controller.dto;
 
 import lombok.Data;
 import lombok.experimental.Accessors;
 
 @Data
 @Accessors(chain = true)
-public class StatisticResponse {
+public class StatisticDTO {
     private Integer countProduct;
     private Integer countShiftPrice;
     //TODO

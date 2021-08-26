@@ -1,4 +1,4 @@
-package ru.shniros.league.domain;
+package ru.shniros.league.repository.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -16,6 +16,6 @@ public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    @Column(name = "name")
+    @Column
     private String name;
 }

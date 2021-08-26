@@ -1,7 +1,7 @@
 package ru.shniros.league.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import ru.shniros.league.domain.Product;
+import ru.shniros.league.repository.domain.Product;
 
 
 public interface ProductRepository extends JpaRepository<Product,Integer> {
