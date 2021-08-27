@@ -14,9 +14,9 @@ import java.util.Date;
 public class Price {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private long id;
     @Column
-    private double price;
+    private long cost;
     @Column
     private Date date;
     @ManyToOne

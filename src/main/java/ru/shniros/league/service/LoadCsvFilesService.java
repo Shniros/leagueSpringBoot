@@ -41,7 +41,7 @@ public class LoadCsvFilesService {
                 Price price = new Price()
                         .setId(data.getPriceId())
                         .setDate(new SimpleDateFormat().parse(data.getPriceDate()))
-                        .setPrice(data.getPrice())
+                        .setCost(data.getPrice())
                         .setProduct(product);
                 productRepository.save(product);
                 priceRepository.save(price);

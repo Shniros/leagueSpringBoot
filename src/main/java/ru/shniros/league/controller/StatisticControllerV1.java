@@ -7,17 +7,17 @@ import ru.shniros.league.repository.PriceRepository;
 import ru.shniros.league.repository.ProductRepository;
 import ru.shniros.league.controller.dto.StatisticDTO;
 
-@RestController
 @RequiredArgsConstructor
+@RestController
 public class StatisticControllerV1 {
+    private PriceRepository priceRepository;
+    private ProductRepository productRepository;
 
-    private final PriceRepository priceRepository;
-    private final ProductRepository productRepository;
     @GetMapping("/statistic")
-    public StatisticDTO getStatistic(){
-
-        return new StatisticDTO().setCountProduct(productRepository.countAllBy())
+    public StatisticDTO getStatistic() {
+        return null;
+       /* return new StatisticDTO().setCountProduct(productRepository.countAllBy())
                                       .setCountShiftPrice(0);
-        //productPriceRepository.countByDateEqualsDateAndProductEqualsProduct()
+        //productPriceRepository.countByDateEqualsDateAndProductEqualsProduct()*/
     }
 }

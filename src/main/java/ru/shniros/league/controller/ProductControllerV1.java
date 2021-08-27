@@ -13,12 +13,12 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 
-@RequiredArgsConstructor
 @RestController
+@RequiredArgsConstructor
 public class ProductControllerV1 {
-    private final PriceRepository priceRepository;
-    private final ProductRepository productRepository;
-    private final ProductMapper productMapper;
+    private PriceRepository priceRepository;
+    private ProductRepository productRepository;
+    private ProductMapper productMapper;
 
     @GetMapping("/products")
     public List<ProductDTO> getProducts() {

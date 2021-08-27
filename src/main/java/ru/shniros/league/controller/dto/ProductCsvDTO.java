@@ -18,7 +18,7 @@ public class ProductCsvDTO {
     @CsvBindByPosition(position = 2)
     private Integer priceId;
     @CsvBindByPosition(position = 3)
-    private double price;
+    private long price;
     @CsvBindByPosition(position = 4)
     private String priceDate;
 }
